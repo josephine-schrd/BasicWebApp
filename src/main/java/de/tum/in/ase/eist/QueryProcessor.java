@@ -17,13 +17,14 @@ public class QueryProcessor {
         } else if (query.contains("name")) {
             return "Josephine";
         } else if (query.contains(("number"))) {
-            String[] LIST = query.split(",");
+            String[] temp = query.split(":");
+            String[] LIST = temp[1].split(",");
 
             int largestInt = 0;
 
             for (String s : LIST
             ) {
-                int a = Integer.parseInt(s);
+                int a = Integer.parseInt(s.strip());
                 if (largestInt <= a){
                     largestInt = a;
                 }
@@ -31,7 +32,9 @@ public class QueryProcessor {
 
             return largestInt + "";
 
-        } else { // TODO extend the programm here
+        }
+
+        else { // TODO extend the programm here
             return "";
         }
     }
