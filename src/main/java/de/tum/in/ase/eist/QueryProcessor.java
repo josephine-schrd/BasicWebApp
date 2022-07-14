@@ -40,7 +40,7 @@ public class QueryProcessor {
             String temp = query.substring(lastIndex + 1);
             String[] LIST = temp.split(" ");
 
-            return Integer.parseInt(LIST[2].strip()) + Integer.parseInt(LIST[4].strip()) + "";
+            return Integer.parseInt(LIST[3].strip()) + Integer.parseInt(LIST[5].strip()) + "";
         }
 
 
