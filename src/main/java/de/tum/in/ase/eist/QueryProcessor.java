@@ -35,6 +35,13 @@ public class QueryProcessor {
             return largestInt + "";
 
         }
+        else if(query.contains("plus")){
+            int lastIndex = query.lastIndexOf(":");
+            String temp = query.substring(lastIndex + 1);
+            String[] LIST = temp.split(" ");
+
+            return Integer.parseInt(LIST[2].strip()) + Integer.parseInt(LIST[4].strip()) + "";
+        }
 
 
         else { // TODO extend the programm here
